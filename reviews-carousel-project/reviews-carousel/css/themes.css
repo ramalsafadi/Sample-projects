@@ -1,0 +1,318 @@
+/* Theme CSS Variables and Styles */
+
+/* Base Theme Variables */
+:root {
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --carousel-transition: 0.5s;
+    
+    /* Border Radius */
+    --border-radius: 12px;
+    --card-border-radius: 16px;
+    --carousel-border-radius: 20px;
+    
+    /* Transforms */
+    --hover-transform: translateY(-2px);
+    --card-hover-transform: translateY(-3px);
+    
+    /* Common Colors */
+    --star-color: #ffd700;
+    --star-empty: #ddd;
+    --success-background: rgba(76, 175, 80, 0.1);
+    --success-text: #4caf50;
+    --error-background: rgba(244, 67, 54, 0.1);
+    --error-text: #f44336;
+    --error-color: #f44336;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --font-family: 'Inter', sans-serif;
+    
+    /* Colors */
+    --primary-color: #a1cca5;
+    --secondary-color: #8fb996;
+    --accent-color: #709775;
+    --background-color: #111d13;
+    --text-color: #a1cca5;
+    --text-secondary: #8fb996;
+    
+    /* Backgrounds */
+    --button-background: rgba(255, 255, 255, 0.629);
+    --button-text: #a1cca5;
+    --panel-background: rgba(65, 93, 67, 0.9);
+    --input-background: rgba(161, 204, 165, 0.05);
+    --carousel-background: rgba(65, 93, 67, 0.3);
+    --card-background: rgba(143, 185, 150, 0.1);
+    --carousel-overlay: linear-gradient(135deg, rgba(161, 204, 165, 0.05) 0%, rgba(65, 93, 67, 0.05) 100%);
+    
+    /* Borders */
+    --border-color: rgba(161, 204, 165, 0.4);
+    --card-border: rgba(143, 185, 150, 0.2);
+    
+    /* Gradients */
+    --title-gradient: linear-gradient(135deg, #a1cca5 0%, #8fb996 50%, #709775 100%);
+    --button-hover-gradient: linear-gradient(135deg, rgba(161, 204, 165, 0.2) 0%, rgba(112, 151, 117, 0.2) 100%);
+    --card-accent: linear-gradient(90deg, #a1cca5 0%, #709775 100%);
+    
+    /* Shadows */
+    --title-shadow: 0 0 20px rgba(161, 204, 165, 0.3);
+    --button-shadow: 0 4px 15px rgba(161, 204, 165, 0.2);
+    --button-hover-shadow: 0 8px 25px rgba(161, 204, 165, 0.4), 0 0 20px rgba(161, 204, 165, 0.2);
+    --active-shadow: 0 0 20px rgba(112, 151, 117, 0.5), inset 0 0 20px rgba(161, 204, 165, 0.1);
+    --panel-shadow: 0 20px 40px rgba(17, 29, 19, 0.5), 0 0 30px rgba(161, 204, 165, 0.1);
+    --carousel-shadow: 0 20px 60px rgba(17, 29, 19, 0.4), inset 0 1px 0 rgba(161, 204, 165, 0.1);
+    --card-shadow: 0 8px 25px rgba(17, 29, 19, 0.3), 0 0 15px rgba(161, 204, 165, 0.1);
+    --card-hover-shadow: 0 15px 40px rgba(17, 29, 19, 0.4), 0 0 25px rgba(161, 204, 165, 0.2);
+    --avatar-shadow: 0 0 15px rgba(161, 204, 165, 0.3);
+    --focus-shadow: rgba(161, 204, 165, 0.3);
+    
+    /* Theme-specific */
+    --accent-text: #111d13;
+    --secondary-text: #111d13;
+    --indicator-inactive: rgba(161, 204, 165, 0.3);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --font-family: 'Poppins', sans-serif;
+    
+    /* Colors */
+    --primary-color: #93b7be;
+    --secondary-color: #8c9a9e;
+    --accent-color: #554348;
+    --background-color: #d4f5f5;
+    --text-color: #554348;
+    --text-secondary: #747578;
+    
+    /* Backgrounds */
+    --button-background: rgba(255, 255, 255, 0.8);
+    --button-text: #554348;
+    --panel-background: rgba(255, 255, 255, 0.95);
+    --input-background: rgba(255, 255, 255, 0.9);
+    --carousel-background: rgba(255, 255, 255, 0.7);
+    --card-background: rgba(255, 255, 255, 0.9);
+    --carousel-overlay: linear-gradient(135deg, rgba(147, 183, 190, 0.1) 0%, rgba(212, 245, 245, 0.1) 100%);
+    
+    /* Borders */
+    --border-color: rgba(147, 183, 190, 0.3);
+    --card-border: rgba(147, 183, 190, 0.2);
+    
+    /* Gradients */
+    --title-gradient: linear-gradient(135deg, #93b7be 0%, #554348 50%, #8c9a9e 100%);
+    --button-hover-gradient: linear-gradient(135deg, rgba(147, 183, 190, 0.2) 0%, rgba(85, 67, 72, 0.1) 100%);
+    --card-accent: linear-gradient(90deg, #93b7be 0%, #554348 100%);
+    
+    /* Shadows */
+    --title-shadow: 0 0 20px rgba(147, 183, 190, 0.3);
+    --button-shadow: 0 4px 15px rgba(147, 183, 190, 0.2);
+    --button-hover-shadow: 0 8px 25px rgba(147, 183, 190, 0.3), 0 4px 15px rgba(85, 67, 72, 0.1);
+    --active-shadow: 0 0 20px rgba(85, 67, 72, 0.3), inset 0 0 20px rgba(147, 183, 190, 0.1);
+    --panel-shadow: 0 20px 40px rgba(85, 67, 72, 0.15), 0 0 30px rgba(147, 183, 190, 0.1);
+    --carousel-shadow: 0 20px 60px rgba(85, 67, 72, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    --card-shadow: 0 8px 25px rgba(85, 67, 72, 0.1), 0 0 15px rgba(147, 183, 190, 0.1);
+    --card-hover-shadow: 0 15px 40px rgba(85, 67, 72, 0.15), 0 0 25px rgba(147, 183, 190, 0.2);
+    --avatar-shadow: 0 0 15px rgba(147, 183, 190, 0.3);
+    --focus-shadow: rgba(147, 183, 190, 0.3);
+    
+    /* Theme-specific */
+    --accent-text: #ffffff;
+    --secondary-text: #ffffff;
+    --indicator-inactive: rgba(147, 183, 190, 0.4);
+}
+
+/* Colorful Theme */
+[data-theme="colorful"] {
+    --font-family: 'Montserrat', sans-serif;
+    
+    /* Colors */
+    --primary-color: #3f84e5;
+    --secondary-color: #c17817;
+    --accent-color: #b20d30;
+    --background-color: #f0e2e7;
+    --text-color: #3f784c;
+    --text-secondary: #777da7;
+    
+    /* Backgrounds */
+    --button-background: rgba(255, 255, 255, 0.9);
+    --button-text: #3f784c;
+    --panel-background: rgba(255, 255, 255, 0.95);
+    --input-background: rgba(255, 255, 255, 0.9);
+    --carousel-background: rgba(255, 255, 255, 0.8);
+    --card-background: rgba(255, 255, 255, 0.9);
+    --carousel-overlay: linear-gradient(135deg, rgba(63, 132, 229, 0.1) 0%, rgba(178, 13, 48, 0.1) 50%, rgba(63, 120, 76, 0.1) 100%);
+    
+    /* Borders */
+    --border-color: rgba(63, 132, 229, 0.3);
+    --card-border: rgba(178, 13, 48, 0.2);
+    
+    /* Gradients */
+    --title-gradient: linear-gradient(135deg, #3f84e5 0%, #b20d30 25%, #c17817 50%, #3f784c 75%, #777da7 100%);
+    --button-hover-gradient: linear-gradient(135deg, rgba(63, 132, 229, 0.2) 0%, rgba(178, 13, 48, 0.2) 50%, rgba(63, 120, 76, 0.2) 100%);
+    --card-accent: linear-gradient(90deg, #3f84e5 0%, #b20d30 25%, #c17817 50%, #3f784c 75%, #777da7 100%);
+    
+    /* Shadows */
+    --title-shadow: 0 0 30px rgba(178, 13, 48, 0.4);
+    --button-shadow: 0 4px 15px rgba(63, 132, 229, 0.3);
+    --button-hover-shadow: 0 8px 25px rgba(178, 13, 48, 0.4), 0 4px 15px rgba(63, 132, 229, 0.2);
+    --active-shadow: 0 0 25px rgba(178, 13, 48, 0.5), inset 0 0 20px rgba(63, 132, 229, 0.1);
+    --panel-shadow: 0 20px 40px rgba(63, 120, 76, 0.2), 0 0 30px rgba(178, 13, 48, 0.1);
+    --carousel-shadow: 0 20px 60px rgba(63, 120, 76, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    --card-shadow: 0 8px 25px rgba(63, 120, 76, 0.15), 0 0 15px rgba(178, 13, 48, 0.1);
+    --card-hover-shadow: 0 15px 40px rgba(63, 120, 76, 0.2), 0 0 25px rgba(178, 13, 48, 0.2);
+    --avatar-shadow: 0 0 15px rgba(63, 132, 229, 0.4);
+    --focus-shadow: rgba(178, 13, 48, 0.3);
+    
+    /* Theme-specific */
+    --accent-text: #ffffff;
+    --secondary-text: #ffffff;
+    --indicator-inactive: rgba(63, 132, 229, 0.4);
+}
+
+/* Black and White Theme */
+[data-theme="blackwhite"] {
+    --font-family: 'Roboto', sans-serif;
+    
+    /* Colors */
+    --primary-color: #333333;
+    --secondary-color: #888888;
+    --accent-color: #000000;
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --text-secondary: #666666;
+    
+    /* Backgrounds */
+    --button-background: #f5f5f5;
+    --button-text: #000000;
+    --panel-background: #ffffff;
+    --input-background: #f9f9f9;
+    --carousel-background: #fafafa;
+    --card-background: #ffffff;
+    --carousel-overlay: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%);
+    
+    /* Borders */
+    --border-color: #e0e0e0;
+    --card-border: #e5e5e5;
+    
+    /* Gradients */
+    --title-gradient: linear-gradient(135deg, #000000 0%, #333333 50%, #666666 100%);
+    --button-hover-gradient: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(51, 51, 51, 0.1) 100%);
+    --card-accent: linear-gradient(90deg, #000000 0%, #333333 100%);
+    
+    /* Shadows */
+    --title-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    --button-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --button-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 4px 15px rgba(0, 0, 0, 0.1);
+    --active-shadow: 0 0 20px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.1);
+    --panel-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
+    --carousel-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.08), 0 0 15px rgba(0, 0, 0, 0.05);
+    --card-hover-shadow: 0 15px 40px rgba(0, 0, 0, 0.12), 0 0 25px rgba(0, 0, 0, 0.08);
+    --avatar-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    --focus-shadow: rgba(0, 0, 0, 0.2);
+    
+    /* Theme-specific */
+    --accent-text: #ffffff;
+    --secondary-text: #ffffff;
+    --indicator-inactive: rgba(0, 0, 0, 0.3);
+}
+
+/* Modern Theme */
+[data-theme="modern"] {
+    --font-family: 'Nunito', sans-serif;
+    
+    /* Colors */
+    --primary-color: #885053;
+    --secondary-color: #777da7;
+    --accent-color: #fe5f55;
+    --background-color: #c6ecae;
+    --text-color: #885053;
+    --text-secondary: #94c9a9;
+    
+    /* Backgrounds */
+    --button-background: rgba(255, 255, 255, 0.9);
+    --button-text: #885053;
+    --panel-background: rgba(255, 255, 255, 0.95);
+    --input-background: rgba(255, 255, 255, 0.9);
+    --carousel-background: rgba(255, 255, 255, 0.8);
+    --card-background: rgba(255, 255, 255, 0.9);
+    --carousel-overlay: linear-gradient(135deg, rgba(254, 95, 85, 0.1) 0%, rgba(119, 125, 167, 0.1) 50%, rgba(148, 201, 169, 0.1) 100%);
+    
+    /* Borders */
+    --border-color: rgba(254, 95, 85, 0.3);
+    --card-border: rgba(148, 201, 169, 0.3);
+    
+    /* Gradients */
+    --title-gradient: linear-gradient(135deg, #fe5f55 0%, #885053 25%, #777da7 50%, #94c9a9 75%, #c6ecae 100%);
+    --button-hover-gradient: linear-gradient(135deg, rgba(254, 95, 85, 0.2) 0%, rgba(136, 80, 83, 0.2) 50%, rgba(148, 201, 169, 0.2) 100%);
+    --card-accent: linear-gradient(90deg, #fe5f55 0%, #885053 50%, #94c9a9 100%);
+    
+    /* Shadows */
+    --title-shadow: 0 0 25px rgba(254, 95, 85, 0.4);
+    --button-shadow: 0 4px 15px rgba(254, 95, 85, 0.3);
+    --button-hover-shadow: 0 8px 25px rgba(254, 95, 85, 0.4), 0 4px 15px rgba(136, 80, 83, 0.2);
+    --active-shadow: 0 0 25px rgba(254, 95, 85, 0.5), inset 0 0 20px rgba(148, 201, 169, 0.1);
+    --panel-shadow: 0 20px 40px rgba(136, 80, 83, 0.2), 0 0 30px rgba(254, 95, 85, 0.1);
+    --carousel-shadow: 0 20px 60px rgba(136, 80, 83, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    --card-shadow: 0 8px 25px rgba(136, 80, 83, 0.15), 0 0 15px rgba(254, 95, 85, 0.1);
+    --card-hover-shadow: 0 15px 40px rgba(136, 80, 83, 0.2), 0 0 25px rgba(254, 95, 85, 0.2);
+    --avatar-shadow: 0 0 15px rgba(254, 95, 85, 0.4);
+    --focus-shadow: rgba(254, 95, 85, 0.3);
+    
+    /* Theme-specific */
+    --accent-text: #ffffff;
+    --secondary-text: #ffffff;
+    --indicator-inactive: rgba(254, 95, 85, 0.4);
+}
+
+/* Theme-specific animations */
+[data-theme="dark"] .theme-btn:hover {
+    box-shadow: 0 0 20px rgba(161, 204, 165, 0.5);
+}
+
+[data-theme="light"] .theme-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+[data-theme="colorful"] .theme-btn:hover {
+    animation: colorPulse 0.6s ease-in-out;
+}
+
+[data-theme="blackwhite"] .theme-btn:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="modern"] .theme-btn:hover {
+    transform: translateY(-3px) scale(1.05) rotate(1deg);
+}
+
+/* Keyframe animations */
+@keyframes colorPulse {
+    0%, 100% { transform: translateY(-3px) scale(1.02); }
+    50% { transform: translateY(-5px) scale(1.08); }
+}
+
+/* Theme transition animations */
+.theme-transition {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Stagger animation for review cards */
+.review-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.review-card:nth-child(1) { animation-delay: 0.1s; }
+.review-card:nth-child(2) { animation-delay: 0.2s; }
+.review-card:nth-child(3) { animation-delay: 0.3s; }
+.review-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

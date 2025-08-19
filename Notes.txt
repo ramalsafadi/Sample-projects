@@ -1,0 +1,6 @@
+The google API call was mocked to insure the view of data without showing any personal API keys. 
+such keys should be saved securely inside the server variables or better a 3rd party secure site (example: firebase configuration service).
+
+to run the project: 
+in the terminal from ./reviews-carousel-project\reviews-carousel run : python3 -m http.server 8000
+then in the browser go to localhost:8000
